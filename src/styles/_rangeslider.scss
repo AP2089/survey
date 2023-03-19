@@ -1,0 +1,52 @@
+.rangeslider {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  height: 25px;
+  width: 100%;
+
+  &__fill,
+  &__fill__bg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    z-index: 2;
+    background-color: $color-global;
+    border-radius: 10px;
+    will-change: width;
+  }
+
+  &__handle {
+    will-change: width, height, top;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    background-color: $color-global;
+    z-index: 3;
+    cursor: pointer;
+    display: block;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    padding: 4px 0 0 0;
+    line-height: 1;
+    transition: width 0.1s ease-in-out, height 0.1s ease-in-out, top 0.1s ease-in-out;
+  }
+
+  &__handle:active {
+    background: $color-global;
+  }
+
+  &__fill__bg {
+    background-color: $color-factory;
+    width: 100%;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+  }
+}

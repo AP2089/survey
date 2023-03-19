@@ -1,0 +1,43 @@
+{
+  "survey": {
+    "list": [
+      {
+        "id": 1,
+        "title": "Lorem Ipsum is simply dummy text of",
+        "sublist": [
+          "Lorem Ipsum is simply dummy text",
+          "Lorem Ipsum is",
+          "Lorem Ipsum is simply",
+          "Lorem Ipsum",
+          "Lorem Ipsum has been",
+          "Lorem Ipsum standard dummy"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Lorem Ipsum has been the industry's standard dummy",
+        "sublist": [
+          "Lorem Ipsum is simply dummy text",
+          "Lorem Ipsum is",
+          "Lorem Ipsum is simply"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lorem Ipsum is simply dummy text of the printing",
+        "sublist": [
+          "Lorem Ipsum is simply dummy text",
+          "Lorem Ipsum is"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Lorem Ipsum has been the industry's standard dummy text",
+        "sublist": [
+          "Lorem Ipsum has been",
+          "Lorem Ipsum standard dummy"
+        ]
+      }
+    ]
+  }
+}

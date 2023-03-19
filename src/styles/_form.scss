@@ -1,0 +1,105 @@
+// checkbox
+.checkbox-base {
+  $rs: &;
+  display: inline-block;
+  vertical-align: middle;
+
+  &__input {
+    position: absolute;
+    left: -100vw;
+    opacity: 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-global;
+    color: transparent;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color .5s ease 0s, border-color .5s ease 0s, background-color .5s ease 0s;
+
+    &:hover {
+      border-color: $color-danger;
+    }
+
+    #{$rs}__input:checked ~ & {
+      color: #ffffff;
+      border-color: $color-danger;
+      background-color: $color-danger;
+    }
+  }
+}
+
+.checkbox-primary {
+  $rs: &;
+  display: inline-block;
+  vertical-align: middle;
+
+  &__input {
+    position: absolute;
+    left: -100vw;
+    opacity: 0;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-global;
+    color: $color-global;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: color .5s ease 0s, border-color .5s ease 0s, background-color .5s ease 0s;
+
+    &:hover {
+      border-color: $color-danger;
+    }
+
+    #{$rs}__input:checked ~ & {
+      color: #ffffff;
+      border-color: $color-global;
+      background-color: $color-global;
+    }
+  }
+}
+
+// validation
+.form-group {
+  position: relative;
+}
+
+.pristine-error {
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #ffffff;
+  background-color: $color-danger;
+  transform: translateY(-80%);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: $color-danger transparent transparent transparent;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    transform: translateY(-1px);
+  }
+}

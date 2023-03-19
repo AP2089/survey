@@ -1,0 +1,106 @@
+.survey {
+  $rs: &;
+  
+  &__wrap {
+    display: block;
+    background-color: #ffffff;
+    padding: 30px 15px;
+
+    &.success {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 15px 0;
+      line-height: 1.2;
+      color: $color-success;
+    }
+  }
+
+  &__head {
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    color: $color-danger;
+  }
+
+  &__body {
+    display: none;
+    margin-bottom: 20px;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__caption {
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    color: $color-info;
+  }
+
+  &__subheading {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    color: $color-global;
+  }
+
+  &__list-item {
+    padding: 20px 20px;
+    background-color: $color-factory;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.form-group > .pristine-error {
+      left: 12px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__checkbox-category {
+    margin-right: 15px;
+  }
+
+  &__sublist {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid $color-service;
+    padding-top: 15px;
+    margin-top: 15px;
+
+    #{$rs}__list-item.active & {
+      display: flex;
+    }
+
+    &.form-group > .pristine-error {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__sublist-item {
+    margin: 0 5px 5px 0;
+  }
+
+  &__btn-submit {
+    display: block;
+    width: 100%;
+  }
+}

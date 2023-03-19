@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {{> (include 'head') }}
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="middle">
+        {{> @partial-block }}
+      </div>
+    </div>
+
+    {{> (include 'scripts') }}
+  </body>
+</html>
